@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Васильев](https://up.htmlacademy.ru/adaptive/15/user/522827).
-* Наставник: `Неизвестно`.
+* Наставник: [Кирилл Швец](https://up.htmlacademy.ru/adaptive/15/user/889347).
 
 ---
 
