@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--inner">
       <a class="header__logo-link">
         <img class="header__logo-image" src="http://placehold.it/150x100" alt="Седона логотип">
       </a>
@@ -28,12 +28,70 @@
       </nav>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">Форма отзыва</h1>
+      <h1 class="visually-hidden">Страница отзывов</h1>
+      <section class="reviews">
+        <h2 class="visually-hidden">Форма отзывов</h2>
+        <p class="reviews__tagline">Оставьте свой отзыв</p>
+        <p class="reviews__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="form-reviews" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form-reviews__item">
+            <legend class="form-reviews__title">Представьтесь:</legend>
+            <label class="form-reviews__label" for="name">Имя<sup>*</sup>:</label>
+            <input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр">
+            <label class="form-reviews__label" for="lastname">Фамилия<sup>*</sup>:</label>
+            <input class="form-reviews__input" type="text" id="lastname" name="lastname" placeholder="Иванов">
+            <label class="form-reviews__label" for="middlename">Отчество<sup>*</sup>:</label>
+            <input class="form-reviews__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
+          </fieldset>
+          <fieldset class="form-reviews__item">
+            <legend class="form-reviews__title">Контактная информация:</legend>
+            <label class="form-reviews__label" for="phone">Контактный телефон<sup>*</sup>:</label>
+            <input class="form-reviews__input form-reviews__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+            <label class="form-reviews__label" for="email">Электронная почта<sup>*</sup>:</label>
+            <input class="form-reviews__input form-reviews__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
+          </fieldset>
+          <!-- Есть пара вопросов тут, по макету тут кастомные чекбоксы и радиобаттоны,
+          значит видимо придётся использовать псевдоэлементы для тх стилизации,
+          в стайлгайде указаны состояния по наведению и нажатию для этих кнопок, в таком случае
+          с точки зрения БЭМ селекторы типа
+          .form-reviews__radio:hover::before и .form-reviews__radio:checked:active::before
+          допустимы? Т.к. в противном случае без использования js не обойтись-->
+          <fieldset class="form-reviews__item">
+            <legend class="form-reviews__title">Ваше общее впечатление:</legend>
+            <label class="form-reviews__label form-reviews__label--radio">
+              <input class="form-reviews__radio" type="radio" name="impression" value="good" checked> Скорее положительное
+            </label>
+            <label class="form-reviews__label form-reviews__label--radio">
+              <input class="form-reviews__radio" type="radio" name="impression" value="bad"> Скорее отрицательное
+            </label>
+            <label class="form-reviews__label form-reviews__label--radio">
+              <input class="form-reviews__radio" type="radio" name="impression" value="notknow"> Затрудняюсь ответить
+            </label>
+          </fieldset>
+          <fieldset class="form-reviews__item">
+            <legend class="form-reviews__title">Посещенные достопримечательности:</legend>
+            <label class="form-reviews__label form-reviews__label--checkbox">
+              <input class="form-reviews__checkbox" type="checkbox" name="devilbridge" checked> Мост Дьявола
+            </label>
+            <label class="form-reviews__label form-reviews__label--checkbox">
+              <input class="form-reviews__checkbox" type="checkbox" name="mountainbell" checked> Гора-Колокол
+            </label>
+            <label class="form-reviews__label form-reviews__label--checkbox">
+              <input class="form-reviews__checkbox" type="checkbox" name="slidepark" checked> Слайд-парк
+            </label>
+            <label class="form-reviews__label form-reviews__label--checkbox">
+              <input class="form-reviews__checkbox" type="checkbox" name="redcliffs"> Красные скалы
+            </label>
+          </fieldset>
+          <fieldset class="form-reviews__item">
+            <legend class="form-reviews__title">Опишите свои эмоции:</legend>
+            <input class="form-reviews__input form-reviews__input--emotions" type="text" name="emotions" placeholder="Опишите подробно все свои восторги">
+          </fieldset>
+          <button class="form-reviews__button button" type="submit">Отправить отзыв</button>
+        </form>
+      </section>
     </main>
     <footer class="footer">
-      <!-- Вот тут вопрос по разметке, в стайлгайде вообще нет никаких
-      состояний этого элемента, значит он не интерактивен, но в макете
-      выглядит как хештег, как его размечать? пока разметил <p> -->
       <p class="footer__hashtag">#visitsedona</p>
       <ul class="footer__social social">
         <li class="social__item">
