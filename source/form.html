@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo-link">
+        <img class="header__logo-image" src="http://placehold.it/150x100" alt="Седона логотип">
+      </a>
+      <nav class="nav">
+        <button class="nav__btn js-menu-btn" type="button">Открыть меню</button>
+        <ul class="nav__menu menu">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Фото и видео</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Форма отзыва</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1 class="visually-hidden">Форма отзыва</h1>
+    </main>
+    <footer class="footer">
+      <!-- Вот тут вопрос по разметке, в стайлгайде вообще нет никаких
+      состояний этого элемента, значит он не интерактивен, но в макете
+      выглядит как хештег, как его размечать? пока разметил <p> -->
+      <p class="footer__hashtag">#visitsedona</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">Наш твиттер</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">Наш фейсбук</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">Наш youtube</a>
+        </li>
+      </ul>
+      <div class="footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTNL Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
