@@ -1,0 +1,38 @@
+.advantages {
+  text-transform: uppercase;
+
+  &__tagline,
+  &__text,
+  &__title,
+  &__number,
+  &__desc {
+    .reset-margin();
+    text-align: center;
+  }
+
+  &__tagline,
+  &__title {
+    .set-font(26px; 18px; bold);
+    color: #000000;
+  }
+
+  &__text {
+    .set-font(26px);
+  }
+
+  &__list {
+    .reset-list-style();
+  }
+
+  &__content {
+    background-color: @lightgrey;
+
+    &--main {
+      background-color: @lightblue;
+    }
+
+    &--main * {
+      color: #ffffff;
+    }
+  }
+}
