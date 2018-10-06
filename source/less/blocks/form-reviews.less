@@ -1,0 +1,31 @@
+.form-reviews {
+  @bg-grey: #f2f2f2;
+
+  &__item {
+    .reset-margin();
+    border: none;
+  }
+
+  &__title {
+    .reset-margin();
+    .set-font(18px; 26px; bold);
+    color: #000000;
+    .center-uppercase();
+  }
+
+  &__label {
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    .reset-margin();
+
+    .set-font(18px; 26px; bold);
+    font-family: "PT Sans", "Arial", sans-serif;
+    color: #000000;
+
+    border: none;
+    background-color: @bg-grey;
+  }
+}
