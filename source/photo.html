@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header header--inner">
-      <a class="header__logo-link">
+      <a class="header__logo-link" href="index.html">
         <img class="header__logo-image" src="http://placehold.it/150x100" alt="Седона логотип">
       </a>
       <nav class="nav">
         <button class="nav__btn js-menu-btn" type="button">Открыть меню</button>
         <ul class="nav__menu menu">
           <li class="menu__item">
-            <a class="menu__link" href="#">Главная</a>
+            <a class="menu__link" href="index.html">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link menu__link--active" href="#">Фото и видео</a>
+            <a class="menu__link menu__link--active">Фото и видео</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Форма отзыва</a>
+            <a class="menu__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
@@ -97,9 +98,6 @@
           Смотрите видео презентацию и скорее за билетами,
           пока они не подорожали в очередной раз!
         </p>
-        <!-- Вопрос по плееру, в ТЗ указано, что работу плеера
-        реализовывать не нужно, только верстка контролов, означает ли это,
-        что не стоит использовать тег <video>? пока что разметил как картинку -->
         <div class="video-content">
           <img class="video-content__video" src="http://placehold.it/150x100">
           <div class="video-content__controls">
@@ -126,10 +124,9 @@
           <a class="social__link social__link--youtube" href="#">Наш youtube</a>
         </li>
       </ul>
-      <div class="footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTNL Academy</a>
-      </div>
+      <a class="footer__copyright copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        Разработано <span>HTML Academy</span>
+      </a>
     </footer>
   </body>
 </html>
