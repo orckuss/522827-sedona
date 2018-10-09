@@ -1,5 +1,33 @@
 .header {
+  position: relative;
+  padding-bottom: 85px;
+
   background-color: #000000;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  // background-image: url("../img/bg-intro-triangle-mobile.svg");
+    // url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  // background-position: bottom;
+    // bottom;
+    // background-size: 100%;
+    // auto;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 30px;
+
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.header__intro {
+  display: block;
+  margin: 0 auto;
+  margin-top: 90px;
+  width: 282px;
+  height: 214px;
 }
