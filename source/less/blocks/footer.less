@@ -1,7 +1,29 @@
+.footer {
+  .center-container(280px);
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__hashtag {
   .reset-margin();
 
   .set-font(21px; 26px; bold);
   color: #000000;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    width: 648px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 960px;
+  }
 }
