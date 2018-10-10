@@ -1,3 +1,7 @@
+.search-hotel {
+  .center-container(280px);
+}
+
 .search-hotel__tagline,
 .search-hotel__text {
   .reset-margin();
@@ -11,4 +15,30 @@
 
 .search-hotel__text {
   line-height: 24px;
+}
+
+.search-hotel__link {
+  margin-bottom: 49px;
+}
+
+@media (max-width: @tablet-width - 1px) {
+  .search-hotel__text br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .search-hotel {
+    width: 458px;
+  }
+
+  .search-hotel__link {
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-hotel__link {
+    margin-bottom: 66px;
+  }
 }
