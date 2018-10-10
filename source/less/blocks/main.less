@@ -1,7 +1,23 @@
+.main {
+  .center-container(@mobile-width);
+}
+
 .main__title {
   .reset-margin();
 
   .set-font(18px; 26px; bold);
   color: #000000;
   .center-uppercase();
+}
+
+@media (min-width: @tablet-width) {
+  .main {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main {
+    width: @desktop-width;
+  }
 }
