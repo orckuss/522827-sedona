@@ -1,3 +1,8 @@
+.popup {
+  display: none;
+  width: 320px;
+}
+
 .popup__title,
 .popup__text {
   margin: 0;
@@ -11,4 +16,14 @@
 
 .popup__text {
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .popup {
+    width: 400px;
+
+    &--success {
+      width: 640px;
+    }
+  }
 }

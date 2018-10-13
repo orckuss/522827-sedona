@@ -32,7 +32,7 @@
         <img src="img/text-sedona.svg" width="229" height="39" alt="SEDONA">
       </div>
     </header>
-    <main class="main centering">
+    <main class="main">
       <h1 class="visually-hidden">Страница отзывов</h1>
       <section class="reviews">
         <header class="reviews__header">
@@ -40,8 +40,8 @@
           <p class="reviews__tagline">Оставьте свой отзыв</p>
           <p class="reviews__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
-        <form class="form-reviews" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form-reviews__item">
+        <form class="form-reviews centering" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form-reviews__item form-reviews__item--personal">
             <legend class="form-reviews__title">Представьтесь:</legend>
             <label class="form-reviews__label" for="name">Имя<sup>*</sup>:</label>
             <input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр">
@@ -50,14 +50,14 @@
             <label class="form-reviews__label" for="middlename">Отчество<sup>*</sup>:</label>
             <input class="form-reviews__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
           </fieldset>
-          <fieldset class="form-reviews__item">
+          <fieldset class="form-reviews__item form-reviews__item--contacts">
             <legend class="form-reviews__title">Контактная информация:</legend>
             <label class="form-reviews__label" for="phone">Контактный телефон<sup>*</sup>:</label>
             <input class="form-reviews__input form-reviews__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
             <label class="form-reviews__label" for="email">Электронная почта<sup>*</sup>:</label>
             <input class="form-reviews__input form-reviews__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
           </fieldset>
-          <fieldset class="form-reviews__item">
+          <fieldset class="form-reviews__item form-reviews__item--impression">
             <legend class="form-reviews__title">Ваше общее впечатление:</legend>
             <label class="form-reviews__label form-reviews__label--radio">
               <input class="form-reviews__radio" type="radio" name="impression" value="good" checked> Скорее положительное
@@ -69,7 +69,7 @@
               <input class="form-reviews__radio" type="radio" name="impression" value="notknow"> Затрудняюсь ответить
             </label>
           </fieldset>
-          <fieldset class="form-reviews__item">
+          <fieldset class="form-reviews__item form-reviews__item--sights">
             <legend class="form-reviews__title">Посещенные достопримечательности:</legend>
             <label class="form-reviews__label form-reviews__label--checkbox">
               <input class="form-reviews__checkbox" type="checkbox" name="devilbridge" checked> Мост Дьявола
@@ -84,10 +84,11 @@
               <input class="form-reviews__checkbox" type="checkbox" name="redcliffs"> Красные скалы
             </label>
           </fieldset>
-          <fieldset class="form-reviews__item">
+          <fieldset class="form-reviews__item form-reviews__item--emotions">
             <legend class="form-reviews__title">Опишите свои эмоции:</legend>
             <input class="form-reviews__input form-reviews__input--emotions" type="text" name="emotions" placeholder="Опишите подробно все свои восторги">
           </fieldset>
+          <p class="form-reviews__text">* — обязательные поля</p>
           <button class="form-reviews__button button js-submit" type="submit">Отправить отзыв</button>
         </form>
       </section>
@@ -116,7 +117,7 @@
       </p>
       <button class="popup__button button js-popup-close" type="button">Ok</button>
     </section>
-    <section class="popup js-popup-success">
+    <section class="popup popup--success js-popup-success">
       <h2 class="popup__title">Ваш отзыв отправлен!</h2>
       <p class="popup__text">
         Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
