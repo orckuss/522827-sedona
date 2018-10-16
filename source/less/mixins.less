@@ -4,17 +4,17 @@
   line-height: @line-height;
 }
 
-.reset-margin() {
-  margin: 0;
-  padding: 0;
-}
-
 .reset-list-style() {
-  .reset-margin();
+  padding: 0;
   list-style: none;
 }
 
 .center-uppercase() {
   text-align: center;
   text-transform: uppercase;
+}
+
+.centering(@width) {
+  width: @width;
+  margin: 0 auto;
 }

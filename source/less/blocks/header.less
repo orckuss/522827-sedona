@@ -1,5 +1,66 @@
-.header {
+.header__intro {
+  height: 389px;
+  padding-top: 90px;
+
   background-color: #000000;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: center bottom;
+
+  img {
+    display: block;
+    width: 282px;
+    height: 214px;
+    margin: 0 auto;
+  }
+
+  &--inner {
+    height: 158px;
+    padding-top: 52px;
+
+    img {
+      width: 229px;
+      height: 39px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header__intro {
+    height: 518px;
+    padding-top: 78px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+
+    img {
+      width: 460px;
+      height: 350px;
+    }
+
+    &--inner {
+      height: 290px;
+      padding-top: 95px;
+
+      img {
+        width: 460px;
+        height: 79px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    width: @desktop-width;
+  }
+
+  .header__intro {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    &--inner {
+      height: 301px;
+      padding-top: 102px;
+    }
+  }
 }

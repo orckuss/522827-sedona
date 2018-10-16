@@ -1,14 +1,51 @@
 .photo__text {
-  .reset-margin();
+  .centering(275px);
 
   line-height: 24px;
   .center-uppercase();
 }
 
 .photo__list {
+  .centering(320px);
   .reset-list-style();
+  display: flex;
+  flex-direction: column;
 }
 
-.photo__item {
-  padding: 22px 20px;
+.photo__post {
+  margin: 22px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__text {
+    width: 435px;
+  }
+
+  .photo__list {
+    width: 648px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 324px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  .photo__post {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__list {
+    width: 1200px;
+  }
+
+  .photo__item {
+    width: 400px;
+  }
 }
