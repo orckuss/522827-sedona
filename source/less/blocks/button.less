@@ -8,4 +8,18 @@
 
   background-color: @lightblue;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @lightblue-hover;
+  }
+
+  &:active {
+    color: fade(#ffffff, 50%);
+    background-color: @lightblue-active;
+  }
+
+  &--disabled {
+    background-color: #e5e5e5;
+  }
 }

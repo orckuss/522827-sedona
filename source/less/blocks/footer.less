@@ -1,12 +1,14 @@
 .footer {
-  padding-top: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 36px;
+  padding-bottom: 28px;
 }
 
 .footer__hashtag {
   margin: 0;
+  margin-bottom: 37px;
 
   .set-font(21px; 26px; bold);
   color: #000000;
@@ -14,14 +16,21 @@
 }
 
 .footer__social {
-  .reset-list-style();
+  margin: 0;
+  margin-bottom: 43px;
 }
 
 @media (min-width: @tablet-width) {
   .footer {
-    width: 648px;
+    width: 80%;
+    padding-bottom: 36px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer__hashtag,
+  .footer__social {
+    margin: 0;
   }
 }
 
