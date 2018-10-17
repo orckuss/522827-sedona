@@ -1,3 +1,30 @@
 .social {
-  //
+  display: flex;
+  .reset-list-style();
+}
+
+.social__item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  background-color: @lightblue;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @lightblue-hover;
+  }
+
+  &:active {
+    background-color: @lightblue-active;
+  }
 }
