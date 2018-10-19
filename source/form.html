@@ -8,11 +8,11 @@
   </head>
   <body>
     <header class="header centering">
-      <nav class="nav">
+      <nav class="nav nav--closed nav--nojs js-menu">
         <a class="nav__logo-link" href="index.html">
           <img src="img\logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
         </a>
-        <button class="nav__btn js-menu-btn" type="button">Открыть меню</button>
+        <button class="nav__btn js-menu-btn" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="nav__menu menu">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Главная</a>
@@ -43,19 +43,28 @@
         <form class="form-reviews centering" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-reviews__item form-reviews__item--personal">
             <legend class="form-reviews__title">Представьтесь:</legend>
-            <label class="form-reviews__label" for="name">Имя<sup>*</sup>:</label>
-            <input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр">
-            <label class="form-reviews__label" for="lastname">Фамилия<sup>*</sup>:</label>
-            <input class="form-reviews__input" type="text" id="lastname" name="lastname" placeholder="Иванов">
-            <label class="form-reviews__label" for="middlename">Отчество<sup>*</sup>:</label>
-            <input class="form-reviews__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
+            <label class="form-reviews__label form-reviews__label--personal" for="name">
+              Имя<sup>*</sup>:<input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр">
+            </label>
+            <label class="form-reviews__label form-reviews__label--personal" for="lastname">
+              Фамилия<sup>*</sup>:<input class="form-reviews__input" type="text" id="lastname" name="lastname" placeholder="Иванов">
+            </label>
+            <label class="form-reviews__label form-reviews__label--personal" for="middlename">
+              Отчество:<input class="form-reviews__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
+            </label>
           </fieldset>
           <fieldset class="form-reviews__item form-reviews__item--contacts">
             <legend class="form-reviews__title">Контактная информация:</legend>
-            <label class="form-reviews__label" for="phone">Контактный телефон<sup>*</sup>:</label>
-            <input class="form-reviews__input form-reviews__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
-            <label class="form-reviews__label" for="email">Электронная почта<sup>*</sup>:</label>
-            <input class="form-reviews__input form-reviews__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
+            <div class="form-reviews__wrapper">
+              <label class="form-reviews__label form-reviews__label--contacts form-reviews__label--phone">
+                <span>Контактный&nbsp;</span>телефон<sup>*</sup>:
+                <input class="form-reviews__input form-reviews__input--contacts" type="tel" name="phone" placeholder="Введите телефон">
+              </label>
+              <label class="form-reviews__label form-reviews__label--contacts form-reviews__label--email">
+                <span>Электронная почта<sup>*</sup>:</span>
+                <input class="form-reviews__input form-reviews__input--contacts" type="email" name="email" placeholder="Введите e-mail">
+              </label>
+            </div>
           </fieldset>
           <fieldset class="form-reviews__item form-reviews__item--impression">
             <legend class="form-reviews__title">Ваше общее впечатление:</legend>
@@ -71,22 +80,24 @@
           </fieldset>
           <fieldset class="form-reviews__item form-reviews__item--sights">
             <legend class="form-reviews__title">Посещенные достопримечательности:</legend>
-            <label class="form-reviews__label form-reviews__label--checkbox">
-              <input class="form-reviews__checkbox" type="checkbox" name="devilbridge" checked> Мост Дьявола
-            </label>
-            <label class="form-reviews__label form-reviews__label--checkbox">
-              <input class="form-reviews__checkbox" type="checkbox" name="mountainbell" checked> Гора-Колокол
-            </label>
-            <label class="form-reviews__label form-reviews__label--checkbox">
-              <input class="form-reviews__checkbox" type="checkbox" name="slidepark" checked> Слайд-парк
-            </label>
-            <label class="form-reviews__label form-reviews__label--checkbox">
-              <input class="form-reviews__checkbox" type="checkbox" name="redcliffs"> Красные скалы
-            </label>
+            <div class="form-reviews__wrapper">
+              <label class="form-reviews__label form-reviews__label--checkbox">
+                <input class="form-reviews__checkbox" type="checkbox" name="devilbridge" checked> Мост Дьявола
+              </label>
+              <label class="form-reviews__label form-reviews__label--checkbox">
+                <input class="form-reviews__checkbox" type="checkbox" name="mountainbell" checked> Гора-Колокол
+              </label>
+              <label class="form-reviews__label form-reviews__label--checkbox">
+                <input class="form-reviews__checkbox" type="checkbox" name="slidepark" checked> Слайд-парк
+              </label>
+              <label class="form-reviews__label form-reviews__label--checkbox">
+                <input class="form-reviews__checkbox" type="checkbox" name="redcliffs"> Красные скалы
+              </label>
+            </div>
           </fieldset>
           <fieldset class="form-reviews__item form-reviews__item--emotions">
             <legend class="form-reviews__title">Опишите свои эмоции:</legend>
-            <input class="form-reviews__input form-reviews__input--emotions" type="text" name="emotions" placeholder="Опишите подробно все свои восторги">
+            <textarea class="form-reviews__input form-reviews__input--emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <p class="form-reviews__text">* — обязательные поля</p>
           <button class="form-reviews__button button js-submit" type="submit">Отправить отзыв</button>

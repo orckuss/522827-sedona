@@ -1,31 +1,132 @@
 @bg-grey: #f2f2f2;
+@bg-grey-hover: #e5e5e5;
+@bg-grey-active: #d5d5d5;
 
 .form-reviews {
   width: 320px;
+  padding-top: 17px;
   display: flex;
   flex-direction: column;
+
+  border-top: 1px solid #e5e5e5;
 }
 
 .form-reviews__item {
   margin: 0;
+  margin-bottom: 17px;
+  padding: 0 20px;
+
   border: none;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:last-of-type {
+    margin-bottom: 26px;
+    border: none;
+  }
 }
 
 .form-reviews__title {
-  margin: 0;
-
   .set-font(18px; 26px; bold);
   color: #000000;
   .center-uppercase();
 }
 
 .form-reviews__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
   line-height: 26px;
-  text-transform: uppercase;
+
+  &--personal {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    &:first-of-type {
+      margin-top: 22px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 25px;
+    }
+  }
+
+  &--contacts {
+    position: relative;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 21px;
+    }
+
+    &:last-child {
+      margin-bottom: 28px;
+    }
+
+    span {
+      padding-left: 22px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 58px;
+      height: 58px;
+
+      background-color: #e6e6e6;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+  }
+
+  &--phone::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  &--radio {
+    margin-bottom: 43px;
+    padding-left: 79px;
+
+    &:first-of-type {
+      margin-top: 37px;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 54px;
+    padding-left: 79px;
+
+    &:first-child {
+      margin-top: 31px;
+    }
+
+    &:last-child {
+      margin-bottom: 42px;
+    }
+  }
+
+  &--radio,
+  &--checkbox {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+  }
 }
 
 .form-reviews__input {
-  margin: 0;
+  width: 170px;
+  margin-left: 14px;
+  padding: 16px 0;
+  padding-left: 22px;
+  flex-grow: 1;
 
   .set-font(18px; 26px; bold);
   font-family: "PT Sans", "Arial", sans-serif;
@@ -33,6 +134,22 @@
 
   border: none;
   background-color: @bg-grey;
+  outline: none;
+
+  &--contacts {
+    width: 100%;
+    margin-top: 7px;
+    margin-left: 0;
+    padding-right: 60px;
+  }
+
+  &--emotions {
+    width: 100%;
+    height: 160px;
+    margin-left: 0;
+
+    resize: none;
+  }
 }
 
 .form-reviews__text {
