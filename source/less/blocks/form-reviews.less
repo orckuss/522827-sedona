@@ -27,11 +27,14 @@
 .form-reviews__title {
   display: block;
   width: 100%;
-  margin-bottom: 22px;
 
   .set-font(18px; 26px; bold);
   color: #000000;
   .center-uppercase();
+
+  &--personal {
+    margin-bottom: 22px;
+  }
 
   &--impression {
     margin-bottom: 24px;
@@ -103,6 +106,7 @@
     margin-bottom: 25px;
 
     li {
+      width: 201px;
       margin-bottom: 24px;
 
       &:last-child {
@@ -306,51 +310,62 @@
   }
 
   .form-reviews__item {
-    width: 100%;
-    margin-bottom: 69px;
+    margin-bottom: 0;
     padding: 0;
 
     border: none;
 
     &--personal {
+      position: relative;
       width: 266px;
+      margin-bottom: 69px;
+      margin-left: 58px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -58px;
+
+        width: 1px;
+        height: 100%;
+
+        background-color: #dbdbdb;
+      }
     }
 
     &--contacts {
+      width: 100%;
       margin-bottom: 52px;
-    }
-
-    &--emotions {
-      margin-bottom: 58px;
     }
 
     &--impression {
       width: 324px;
+      margin-bottom: 69px;
       order: -1;
-      border-right: 1px solid #e5e5e5;
     }
 
-    &--contacts,
-    &--sights,
+    &--sights {
+      width: 100%;
+    }
+
     &--emotions {
-      border-top: 1px solid #e5e5e5;
+      width: 100%;
+      margin-bottom: 58px;
     }
   }
 
   .form-reviews__title {
-    width: 400px;
-    margin-bottom: 58px;
-
     font-size: 21px;
 
-    &--personal,
-    &--impression {
-      width: auto;
+    &--personal {
+      margin-bottom: 58px;
       text-align: left;
     }
 
     &--impression {
       margin-bottom: 60px;
+      text-align: left;
     }
 
     &--contacts {
@@ -360,47 +375,51 @@
     &--sights {
       margin-bottom: 43px;
     }
+
+    &--emotions {
+      margin-bottom: 58px;
+    }
   }
 
   .form-reviews__wrapper {
     width: auto;
     margin-bottom: 0;
 
-    &--sights {
-      padding-right: 90px;
-      padding-left: 95px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-
-  .form-reviews__label {
-    &--personal:last-of-type {
-      margin-bottom: 0;
-    }
-
-    &--contacts {
-      margin-bottom: 23px;
-    }
-
-    &--radio {
+    &--impression li {
       margin-bottom: 22px;
     }
 
-    &--checkbox {
-      width: 200px;
-      margin-bottom: 62px;
+    &--contacts li {
+      margin-bottom: 23px;
+    }
 
-      &:last-child {
-        // margin-bottom: 0;
+    &--sights {
+      width: 460px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 67px;
+        }
       }
     }
   }
 
   .form-reviews__text {
     display: block;
+    align-self: baseline;
     order: 1;
+  }
+
+  .form-reviews__button {
+    width: 324px;
+    margin: 0;
+    margin-bottom: 97px;
+    align-self: baseline;
   }
 }
 
