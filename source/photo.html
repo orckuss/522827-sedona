@@ -126,13 +126,22 @@
           Смотрите видео презентацию и скорее за билетами,
           пока они не подорожали в очередной раз!
         </p>
-        <div class="video-content">
+        <div class="video__content video-content">
           <img class="video-content__video" src="http://placehold.it/150x100">
           <div class="video-content__controls">
-            <div class="video-content__scrollbar"></div>
-            <button class="video-content__replay">Начать заного</button>
-            <button class="video-content__subtitles">Субтитры</button>
-            <button class="video-content__widescreen">На весь экран</button>
+            <div class="video-content__scrollbar">
+              <div class="video-content__bar"></div>
+              <div class="video-content__point"></div>
+            </div>
+            <button class="video-content__button video-content__button--replay" title="Начать заного">
+              <span class="visually-hidden">Начать заного</span>
+            </button>
+            <button class="video-content__button" title="Субтитры">
+              <span class="visually-hidden">Субтитры</span>
+            </button>
+            <button class="video-content__button" title="На весь экран">
+              <span class="visually-hidden">На весь экран</span>
+            </button>
           </div>
         </div>
       </section>
