@@ -306,7 +306,6 @@
 
 @media (min-width: @tablet-width) {
   .form-reviews {
-    width: 648px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -325,6 +324,8 @@
       position: relative;
       width: 266px;
       margin-bottom: 69px;
+      margin-left: 58px;
+      flex-grow: 1;
 
       &::before {
         content: "";
@@ -348,6 +349,7 @@
       width: 324px;
       margin-bottom: 69px;
       order: -1;
+      flex-grow: 1;
     }
 
     &--sights {
@@ -430,12 +432,13 @@
     }
 
     &--sights {
-      width: 460px;
+      padding-left: 94px;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
 
       li {
+        width: 201px;
+        margin-right: 58px;
         margin-bottom: 32px;
 
         &:last-child {
@@ -460,10 +463,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-reviews {
-    width: 960px;
-  }
-
   .form-reviews__item {
     &--personal,
     &--impression {
@@ -519,10 +518,15 @@
     }
 
     &--sights {
-      width: 100%;
+      padding-left: 0;
+      justify-content: space-between;
 
-      li:last-child {
-        margin-bottom: 65px;
+      li {
+        margin-right: 0;
+
+        &:last-child {
+          margin-bottom: 65px;
+        }
       }
     }
   }
