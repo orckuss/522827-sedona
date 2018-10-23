@@ -44,7 +44,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="Закат">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Закат">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <h3 class="photo-post__title">Неродные просторы</h3>
@@ -57,7 +61,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="флора">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="кактус">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <h3 class="photo-post__title">Местная растительность</h3>
@@ -70,7 +78,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="дорога">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="дорога">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <h3 class="photo-post__title">Дорога на север</h3>
@@ -83,7 +95,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="Мост дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <h3 class="photo-post__title">Мост дьявола</h3>
@@ -103,7 +119,11 @@
           пока они не подорожали в очередной раз!
         </p>
         <div class="video-content">
-          <img class="video-content__video" src="http://placehold.it/150x100">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-ddesktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video-content__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+          </picture>
           <div class="video-content__controls">
             <div class="video-content__scrollbar"></div>
             <button class="video-content__replay">Начать заного</button>
