@@ -10,11 +10,49 @@
 }
 
 .features__item {
+  position: relative;
   margin-bottom: 28px;
   padding-left: 50px;
 
   &:last-child {
     margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--lodging::after {
+    top: -8px;
+    left: 1px;
+
+    width: 39px;
+    height: 37px;
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &--souvenirs::after {
+    top: -8px;
+    left: 5px;
+
+    width: 32px;
+    height: 38px;
+
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  &--food::after {
+    top: -3px;
+    left: -1px;
+
+    width: 40px;
+    height: 35px;
+
+    background-image: url("../img/icon-burger.svg");
   }
 }
 
@@ -54,6 +92,29 @@
 
     &--souvenirs {
       order: 1;
+    }
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--lodging::after {
+      top: 60px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &--food::after {
+      top: 63px;
+      width: 77px;
+      height: 68px;
+    }
+
+    &--souvenirs::after {
+      top: 57px;
+      width: 64px;
+      height: 75px;
     }
   }
 
