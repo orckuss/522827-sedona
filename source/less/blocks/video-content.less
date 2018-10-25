@@ -49,14 +49,39 @@
   padding: 0;
 
   border: none;
-  // временно
-  // background: none;
+  background: none;
 
   cursor: pointer;
   outline: none;
 
+  path,
+  polygon {
+    fill: #5c6870;
+  }
+
   &--replay {
     margin-right: auto;
+  }
+
+  &--subtitles {
+    svg {
+      margin-left: 34px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    path,
+    polygon {
+      fill: #333333;
+    }
+  }
+
+  &:active {
+    path,
+    polygon {
+      fill: fade(#333333, 30%);
+    }
   }
 }
 
@@ -90,6 +115,30 @@
       width: 93px;
       margin-right: 0;
       order: -1;
+    }
+
+    &--fullscreen svg {
+      margin-right: 20px;
+    }
+
+    path,
+    polygon {
+      fill: #ffffff;
+    }
+
+    &:hover,
+    &:focus {
+      path,
+      polygon {
+        fill: fade(#ffffff, 60%);
+      }
+    }
+
+    &:active {
+      path,
+      polygon {
+        fill: fade(#ffffff, 30%);
+      }
     }
   }
 }
