@@ -1,5 +1,25 @@
 .copyright-link {
+  display: flex;
+  align-items: center;
+
   line-height: 26px;
   color: #000000;
   text-transform: uppercase;
+
+  svg {
+    margin-left: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: #81b3d2;
+    }
+  }
+
+  &:active {
+    path {
+      fill: fade(#000000, 30%);
+    }
+  }
 }
