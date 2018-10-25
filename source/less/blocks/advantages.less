@@ -1,5 +1,4 @@
 .advantages {
-  // width: @mobile-width;
   padding-top: 43px;
 }
 
@@ -30,27 +29,6 @@
   .reset-list-style();
   display: flex;
   flex-direction: column;
-
-  @media (max-width: @tablet-width - 1px) {
-    position: relative;
-    padding-top: 16px;
-
-    background-color: @lightblue;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 16px;
-
-      background-image: url("../img/bg-triangle.svg");
-      background-position: bottom;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 .advantages__item {
@@ -71,6 +49,27 @@
       color: #ffffff;
     }
   }
+
+  &--mobile-top {
+    @media (max-width: @tablet-width - 1px) {
+      position: relative;
+      padding-top: 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 16px;
+
+        background-image: url("../img/bg-triangle.svg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
 
 .advantages__image {
@@ -81,10 +80,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages {
-    width: @tablet-width;
-  }
-
   .advantages__header {
     .centering(500px);
   }
