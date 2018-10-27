@@ -1,7 +1,22 @@
 .main__title {
-  margin: 0;
+  margin-top: 37px;
 
   .set-font(18px; 26px; bold);
   color: #000000;
   .center-uppercase();
+}
+
+@media (min-width: @tablet-width) {
+  .main__title {
+    margin-top: 72px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main__title {
+    margin-top: 109px;
+  }
 }
