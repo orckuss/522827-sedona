@@ -10,7 +10,11 @@
     <header class="header centering">
       <nav class="nav nav--closed nav--nojs js-menu">
         <a class="nav__logo-link" href="index.html">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+          </picture>
         </a>
         <button class="nav__btn js-menu-btn" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="nav__menu menu">
@@ -44,7 +48,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="Закат">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Закат">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <div>
@@ -66,7 +74,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="флора">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="кактус">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <div>
@@ -88,7 +100,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="дорога">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="дорога">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <div>
@@ -110,7 +126,11 @@
           <li class="photo__item">
             <figure class="photo__post photo-post">
               <a class="photo-post__link" href="#" title="Полный вид">
-                <img class="photo-post__image" src="http://placehold.it/150x100" alt="Мост дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="photo-post__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                </picture>
               </a>
               <figcaption class="photo-post__desc">
                 <div>
@@ -138,8 +158,12 @@
           Смотрите видео презентацию и скорее за билетами,
           пока они не подорожали в очередной раз!
         </p>
-        <div class="video__content video-content">
-          <img class="video-content__video" src="http://placehold.it/150x100">
+        <div class="video-content">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-ddesktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video-content__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+          </picture>
           <div class="video-content__controls">
             <div class="video-content__scrollbar">
               <div class="video-content__bar"></div>
@@ -200,5 +224,6 @@
       </a>
     </footer>
     <script src="js/app.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
