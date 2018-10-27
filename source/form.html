@@ -46,11 +46,11 @@
             <ul class="form-reviews__wrapper form-reviews__wrapper--personal">
               <li>
                 <label class="form-reviews__label form-reviews__label--personal" for="name">Имя<sup>*</sup>:</label>
-                <input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр">
+                <input class="form-reviews__input" type="text" id="name" name="name" placeholder="Петр" required>
               </li>
               <li>
                 <label class="form-reviews__label form-reviews__label--personal" for="lastname">Фамилия<sup>*</sup>:</label>
-                <input class="form-reviews__input" type="text" id="lastname" name="lastname" placeholder="Иванов">
+                <input class="form-reviews__input" type="text" id="lastname" name="lastname" placeholder="Иванов" required>
               </li>
               <li>
                 <label class="form-reviews__label form-reviews__label--personal" for="middlename">Отчество:</label>
@@ -63,11 +63,11 @@
             <ul class="form-reviews__wrapper form-reviews__wrapper--contacts">
               <li>
                 <label class="form-reviews__label form-reviews__label--contacts form-reviews__label--phone" for="phone"><span>Контактный&nbsp;</span>телефон<sup>*</sup>:</label>
-                <input class="form-reviews__input form-reviews__input--contacts" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+                <input class="form-reviews__input form-reviews__input--contacts" type="tel" id="phone" name="phone" placeholder="Введите телефон" pattern="[+]{1}[1-9]{1,3}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
               </li>
               <li>
                 <label class="form-reviews__label form-reviews__label--contacts form-reviews__label--email" for="email">Электронная почта<sup>*</sup>:</label>
-                <input class="form-reviews__input form-reviews__input--contacts" type="email" id="email" name="email" placeholder="Введите e-mail">
+                <input class="form-reviews__input form-reviews__input--contacts" type="email" id="email" name="email" placeholder="Введите e-mail" required>
               </li>
             </ul>
           </fieldset>
