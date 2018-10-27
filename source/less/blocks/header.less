@@ -1,11 +1,18 @@
 .header__intro {
-  height: 389px;
+  position: relative;
+  min-height: 389px;
   padding-top: 90px;
+  padding-bottom: 10px;
 
   background-color: #000000;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-size: 768px auto;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   img {
     display: block;
@@ -15,23 +22,42 @@
   }
 
   &--inner {
-    height: 158px;
+    min-height: 158px;
     padding-top: 52px;
+
+    background-position: center bottom;
 
     img {
       width: 229px;
       height: 39px;
     }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 26px;
+
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .header__intro {
-    height: 518px;
+    min-height: 518px;
     padding-top: 78px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
 
     img {
       width: 460px;
@@ -39,13 +65,18 @@
     }
 
     &--inner {
-      height: 290px;
+      min-height: 290px;
       padding-top: 95px;
 
       img {
-        width: 460px;
-        height: 79px;
+        width: 458px;
+        height: 78px;
       }
+    }
+
+    &::after {
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
     }
   }
 }
@@ -58,9 +89,17 @@
   .header__intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+
     &--inner {
-      height: 301px;
+      min-height: 301px;
       padding-top: 102px;
+    }
+
+    &::after {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
   }
 }

@@ -99,12 +99,26 @@
 
 .nav__logo-link {
   position: absolute;
-  left: calc(50% - 102px / 2);
+  left: 50%;
   bottom: 56px - 83px;
-}
 
-.nav__logo-link img {
-  display: block;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  img {
+    display: block;
+    width: 102px;
+    height: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 56px - 96px;
+
+    img {
+      width: 188px;
+      height: 96px;
+    }
+  }
 }
 
 .nav__menu {
