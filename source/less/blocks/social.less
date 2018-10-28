@@ -5,10 +5,6 @@
 
 .social__item {
   margin-right: 6px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .social__link {
@@ -56,5 +52,11 @@
     &::after {
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 160px;
   }
 }

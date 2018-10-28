@@ -3,28 +3,18 @@
 
   min-height: 386px;
   padding-bottom: 36px;
+  overflow: hidden;
 }
 
-.map__iframe {
+.map__image img {
   display: block;
-  width: 100%;
-  max-width: @desktop-width;
   margin: 0 auto;
 }
 
-.map__image {
+.map__iframe {
   position: absolute;
   top: 0;
-  left: 50%;
-  z-index: -1;
+  left: 0;
 
   width: 100%;
-  max-width: @desktop-width;
-
-  transform: translateX(-50%);
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
 }
