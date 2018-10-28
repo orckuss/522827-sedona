@@ -1,8 +1,14 @@
-.photo-post__image {
+.photo-post__link {
   display: block;
   width: 280px;
   height: 280px;
   margin: 0 auto;
+}
+
+.photo-post__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .photo-post__desc {
@@ -53,10 +59,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photo-post__image {
+  .photo-post__link {
+    position: relative;
     width: 100%;
-    height: auto;
-    margin: 0;
+    height: 267px;
+
+    overflow: hidden;
+
+    &--main {
+      height: 400px;
+    }
+  }
+
+  .photo-post__image {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
   }
 
   .photo-post__desc {
