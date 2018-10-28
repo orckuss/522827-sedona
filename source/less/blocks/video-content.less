@@ -54,8 +54,7 @@
   cursor: pointer;
   outline: none;
 
-  path,
-  polygon {
+  svg {
     fill: #5c6870;
   }
 
@@ -71,15 +70,13 @@
 
   &:hover,
   &:focus {
-    path,
-    polygon {
+    svg {
       fill: #333333;
     }
   }
 
   &:active {
-    path,
-    polygon {
+    svg {
       fill: fade(#333333, 30%);
     }
   }
@@ -121,22 +118,19 @@
       margin-right: 20px;
     }
 
-    path,
-    polygon {
+    svg {
       fill: #ffffff;
     }
 
     &:hover,
     &:focus {
-      path,
-      polygon {
+      svg {
         fill: fade(#ffffff, 60%);
       }
     }
 
     &:active {
-      path,
-      polygon {
+      svg {
         fill: fade(#ffffff, 30%);
       }
     }
