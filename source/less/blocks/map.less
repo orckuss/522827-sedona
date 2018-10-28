@@ -1,7 +1,30 @@
+.map {
+  position: relative;
+
+  min-height: 386px;
+  padding-bottom: 36px;
+}
+
 .map__iframe {
   display: block;
   width: 100%;
   max-width: @desktop-width;
   margin: 0 auto;
-  margin-bottom: 36px;
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+
+  width: 100%;
+  max-width: @desktop-width;
+
+  transform: translateX(-50%);
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
