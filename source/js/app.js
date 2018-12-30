@@ -12,3 +12,18 @@ menuToggle.addEventListener('click', function() {
     menu.classList.add('nav--closed');
   }
 });
+
+$(document).ready(function() {
+  $(".js-submit").click(function(evt) {
+    if (!$("#name").val() || !$("#lastname").val() || !$("#phone").val() || !$("#email").val()) {
+      evt.preventDefault();
+      $(".js-popup-error").fadeIn("fast");
+    }
+  });
+  $(".js-submit").parent().submit(function() {
+    $(".js-popup-success").fadeIn("fast");
+  });
+  $(".js-popup-close").click(function() {
+    $(".js-popup-error, .js-popup-success").fadeOut("fast");
+  });
+});
