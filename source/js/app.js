@@ -33,4 +33,9 @@ $(document).ready(function() {
   $(".js-popup-close").click(function() {
     $(".js-popup-error, .js-popup-success").fadeOut("fast");
   });
+  $(window).keydown(function(evt) {
+    if (evt.keyCode === 27 && $(".js-popup-error, .js-popup-success").css("display") === "block") {
+      $(".js-popup-error, .js-popup-success").fadeOut("fast");
+    }
+  });
 });
