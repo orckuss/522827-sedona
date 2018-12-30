@@ -15,7 +15,14 @@ menuToggle.addEventListener('click', function() {
 
 $(document).ready(function() {
   $(".js-submit").click(function(evt) {
-    if (!$("#name").val() || !$("#lastname").val() || !$("#phone").val() || !$("#email").val()) {
+    var inputRequired = $(".form-reviews__input[required]");
+    for (var i = 0; i < inputRequired.length; i++) {
+      $(inputRequired[i]).removeClass("form-reviews__input--error");
+      if (!$(inputRequired[i]).val()) {
+        $(inputRequired[i]).addClass("form-reviews__input--error");
+      }
+    }
+    if (inputRequired.hasClass("form-reviews__input--error")) {
       evt.preventDefault();
       $(".js-popup-error").fadeIn("fast");
     }
